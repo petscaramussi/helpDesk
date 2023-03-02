@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.peterson.helpdesk.domain.Tecnico;
 
 import java.util.Optional;
+import java.util.List;
 
 @Service
 public class TecnicoService {
@@ -19,4 +20,7 @@ public class TecnicoService {
         return obj.orElseThrow(() -> new ObjectnotFoundException("Objeto não encontrado! id: " + id));
     }
 
+    public List<Tecnico> findAll() {
+        return repository.findAll();
+    }
 }
