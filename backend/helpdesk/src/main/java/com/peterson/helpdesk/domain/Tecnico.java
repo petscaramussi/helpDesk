@@ -28,6 +28,7 @@ public class Tecnico extends Pessoa{
     }
 
     public Tecnico(TecnicoDTO obj) {
+        super();
         this.id = obj.getId();
         this.nome = obj.getNome();
         this.cpf = obj.getCpf();
