@@ -6,13 +6,15 @@ import com.peterson.helpdesk.services.ChamadoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
+import java.net.URI;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping(value = "/chamado")
+@RequestMapping(value = "/chamados")
 public class ChamadoResource {
 
     @Autowired
@@ -31,5 +33,16 @@ public class ChamadoResource {
         return ResponseEntity.ok().body(listDTO);
     }
 
-   //
+    @PostMapping
+    public ResponseEntity<ChamadoDTO> create(@Valid @RequestBody ChamadoDTO obj) {
+        Chamado newObj = service.create(obj);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(newObj.getId()).toUri();
+        return ResponseEntity.created(uri).build();
+    }
+
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<ChamadoDTO> update(@PathVariable Integer id, @Valid @RequestBody ChamadoDTO objDTO) {
+        Chamado newObj = service.update(id, objDTO);
+        return ResponseEntity.ok().body(new ChamadoDTO(newObj));
+    }
 }
