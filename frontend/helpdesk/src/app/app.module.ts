@@ -3,9 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // imports para forms
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+// Para realizar requisições HTTP
+import { HttpClientModule } from '@angular/common/http';
 
 // imports Angular Material
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -34,22 +38,27 @@ import { NavComponent } from './components/nav/nav.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    // Forms
+    FormsModule,
+    ReactiveFormsModule,
+    // Requisições http
+    HttpClientModule,
+    // Angular Material
     MatFormFieldModule,
     MatPaginatorModule,
-    MatSnackBarModule,
     MatCheckboxModule,
+    MatSnackBarModule,
     MatToolbarModule,
     MatSidenavModule,
     MatButtonModule,
     MatSelectModule,
-    MatTableModule,
-    MatRadioModule,
     MatInputModule,
+    MatRadioModule,
+    MatTableModule,
     MatIconModule,
     MatListModule,
-    MatCardModule,
-    FormsModule,
-    ReactiveFormsModule
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
