@@ -25,7 +25,7 @@
             matInput placeholder="123">
         </mat-form-field>
 
-        <button [disabled]="!validaCampos()" class="full-width" mat-stroked-button color="primary">Login</button>
+        <button (click)="logar()" [disabled]="!validaCampos()" class="full-width" mat-stroked-button color="primary">Login</button>
     
     </form>
 
