@@ -49,7 +49,7 @@ public class ClienteService {
         if(!objDTO.getSenha().equals(oldObj.getSenha())) {
             objDTO.setSenha(encoder.encode(objDTO.getSenha()));
         }
-        
+
         validaPorCpfEEmail(objDTO);
         oldObj = new Cliente(objDTO);
         return repository.save(oldObj);
