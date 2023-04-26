@@ -5,7 +5,7 @@
 
         <img src="assets/img/login-image.svg" alt="Help Desk Image">
 
-        <mat-form-field class="full-width">
+        <mat-form-field class="full-width" appearance="outline">
             <mat-label>E-mail</mat-label>
             <input
             [formControl]="email"
@@ -13,9 +13,10 @@
             [(ngModel)]="creds.email"
             name="email"
             matInput placeholder="exemplo@mail.com">
+            <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
 
-        <mat-form-field class="full-width">
+        <mat-form-field class="full-width" appearance="outline">
             <mat-label>Senha</mat-label>
             <input
             [formControl]="senha"
@@ -23,6 +24,7 @@
             [(ngModel)]="creds.senha"
             name="senha" type="password"
             matInput placeholder="123">
+            <mat-icon matSuffix>password</mat-icon>
         </mat-form-field>
 
         <button (click)="logar()" [disabled]="!validaCampos()" class="full-width" mat-stroked-button color="primary">Login</button>
