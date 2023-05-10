@@ -2,7 +2,11 @@
  🅰 Angular + 🍃 Spring Boot  - HELP DESK APP
 
 ## Prints
-<img src="https://github.com/petscaramussi/helpDesk/blob/main/prints/1.jpeg" width="32%"> <img src="https://github.com/petscaramussi/helpDesk/blob/main/prints/2.jpeg" width="32%"> <img src="https://github.com/petscaramussi/helpDesk/blob/main/prints/3.jpeg" width="32%">
+<img src="https://github.com/petscaramussi/helpDesk/blob/main/prints/1.jpeg" width="48%"> <img src="https://github.com/petscaramussi/helpDesk/blob/main/prints/2.jpeg" width="48%">
+
+<img src="https://github.com/petscaramussi/helpDesk/blob/main/prints/3.jpeg" width="32%"> <img src="https://github.com/petscaramussi/helpDesk/blob/main/prints/4.jpeg" width="32%"> <img src="https://github.com/petscaramussi/helpDesk/blob/main/prints/5.jpeg" width="32%">
+
+<img src="https://github.com/petscaramussi/helpDesk/blob/main/prints/6.jpeg" width="32%"> <img src="https://github.com/petscaramussi/helpDesk/blob/main/prints/7.jpeg" width="32%">  <img src="https://github.com/petscaramussi/helpDesk/blob/main/prints/8.jpeg" width="32%">
 
 
 ## Build
