@@ -14,6 +14,8 @@ export class ChamadoListComponent implements OnInit {
   ELEMENT_DATA: Chamado[] = [];
   FILTERED_DATA: Chamado[] = [];
 
+  numeroBaixo: Number = 0;
+
   displayedColumns: string[] = ['id', 'titulo', 'cliente', 'tecnico', 'DataAbertura', 'prioridade', 'status', 'acoes'];
   dataSource = new MatTableDataSource<Chamado>(this.ELEMENT_DATA);
 
@@ -32,6 +34,16 @@ export class ChamadoListComponent implements OnInit {
       this.ELEMENT_DATA = resposta;
       this.dataSource = new MatTableDataSource<Chamado>(resposta);
       this.dataSource.paginator = this.paginator;
+      
+
+      let counter = 0;
+      for (let i = 0; i < this.ELEMENT_DATA.length; i++) {
+        if (this.ELEMENT_DATA[i].prioridade == '1') counter++;
+      }
+      
+
+      console.log(counter);
+
     })
   }
 

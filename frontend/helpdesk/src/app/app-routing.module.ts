@@ -15,6 +15,7 @@ import { ClienteDeleteComponent } from './components/cliente/tecnico-delete/clie
 import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
 import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
+import { ChartComponent } from './components/charts/chart/chart.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -34,7 +35,9 @@ const routes: Routes = [
 
     { path: 'chamados', component: ChamadoListComponent},
     { path: 'chamados/create', component: ChamadoCreateComponent},
-    { path: 'chamados/update/:id', component: ChamadoUpdateComponent}
+    { path: 'chamados/update/:id', component: ChamadoUpdateComponent},
+
+    {path: 'graficos', component: ChartComponent}
   ] }
 ];
 
