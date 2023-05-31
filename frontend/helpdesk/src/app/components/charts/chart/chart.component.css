@@ -1,0 +1,24 @@
+h1{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.chart1{
+    height: 20rem;
+    width: 40rem;
+}
+
+.chart2{
+    height: 20rem;
+    width: 40rem;    
+}
+
+.chart3{
+    height: 20rem;
+    width: 40rem;
+}
+
